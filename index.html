@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>GYM</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700|Poppins:300,400,500,700" rel="stylesheet">
+
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+</head>
+
+
+<body>
+
+
+<header>
+  <div class="menu">
+    <div class="contenedor">
+      <p class="logo">Fitness Gym Home</p>
+      <img src="imagenes/menu.png" class="menu-icon" alt="">
+      <nav>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#programs">Rutinas</a></li>
+          <li><a href="#join">Unite</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<section id="intro">
+  <div class="izquierda">
+    <p>ENTRENAMIENTO FUNCIONAL</p>
+    <H1>DIVI FITNESS GYM</H1>
+    <a href="">Empieza tu entrenamiento personal HOY</a>
+  </div>
+  <div class="derecha">
+    <div class="contenido">
+      <p>Obtenga su prueba gratis de 3 días</p>
+      <a href="">Obtener descuento</a>
+    </div>
+  </div>
+</section>
+
+<section id="programs">
+  <div class="contenedor">
+    <div class="rojo cero">24/7</div>
+    <div class="rojo ini">Todos los Niveles</div>
+    <h2>Rutinas personalizadas</h2>
+    <p>Creamos tu entrenamiento de acuerdo a tus necesidades</p>
+    <a href="">Nuestros servicios</a>
+    <div class="contenedor-programs">
+      <div class="program" id="uno">
+        <h3>PERSONAL TRAINING</h3>
+        <p>Realizamos la planificación sistematizada según los objetivos de clientes, y variedad de entrenamiento en domicilio, airelibre y gym.</p>
+      </div>
+      <div class="program" id="dos">
+        <h3>Fitness</h3>
+        <p>Se trata de una forma de actividad física que, basándose en ejercicios cortos y de gran intensidad, permite generar un alto gasto calórico en poco tiempo.
+        Contribuye a mejorar la flexibilidad, movilidad y equilibrio del cuerpo; a la vez que se queman grasas y se desarrolla masa muscular.
+        Para su práctica se utiliza implementos como mancuernas rusas, pelotas de entrenamiento, bolas Bosu, elásticos, ruedas abdominales, entre otros</p>
+      </div>
+      <div class="program" id="tres">
+        <h3>Localizada</h3>
+        <p>Es una clase donde tanto su entrada en calor como desarrollo no contiene coreografías. Brinda múltiples beneficios, tanto para su salud física como mental.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="section-video">
+  <div class="contenedor">
+    <video id="video" width="900px" height="600px" src="imagenes/video.mp4"></video>
+    <div class="botones">
+      <button id="boton" onclick="playVideo()"><i class="far fa-play-circle"></i></button>
+    </div>
+  </div>
+</section>
+
+<script>
+
+var video = document.getElementById('video');
+var boton = document.getElementById('boton');
+
+function playVideo() {
+  video.play();
+  boton.style.display = 'none';
+}
+
+video.addEventListener('ended', function() {
+  boton.style.display = 'block';
+})
+
+</script>
+
+<section id="join">
+  <div class="izquierda">
+    <a href="">UNITE AL GRUPO</a>
+    <img id="uno" src="imagenes/izq.jpg" alt="">
+  </div>
+  <div class="derecha">
+    <img id="dos" src="imagenes/der1.jpg" alt="">
+    <img id="tres" src="imagenes/der2.jpg" alt="">
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="contenedor">
+    <span class="comillas">"</span>
+    <h2>TESTIMONIOS</h2>
+    <a href="">COMPARTE EL MOVIMIENTO</a>
+    <div class="contenedor-testimonials">
+
+      <div class="testimonial">
+        <div class="contenido">
+          <div class="foto"></div>
+          <p>“Desde el primer día, me aconsejaron sobre cuáles debían ser los movimientos y ejercicios a evitar, así como la técnica y forma apropiada para los ejercicios que me beneficiarían a salir de la lesión.En dos meses sentí una notoria mejoría. El dolor disminuyó y al cabo de ese tiempo regresé con más fuerza y estabilidad a correr.”</p>
+        </div>
+        <p class="nombre">Adriana</p>
+      </div>
+
+      <div class="testimonial">
+        <div class="contenido">
+          <div class="foto"></div>
+          <p>“El tener a alguien que te apoye, te instruya y sobre todo te motive a lograr tus objetivos es algo que considero tiene mucho valor. Y lo mejor es hacerlo con personas preparada, que sepan lo que dicen, lo que hacen y busquen siempre estar en un proceso de mejora continua.”</p>
+        </div>
+        <p class="nombre">Julia</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="izquierda">
+    <p>Dejanos tu consulta</p>
+    <h2>CONTACTO</h2>
+    <form action="enviar.php" method="post">
+      <input type="text" placeholder="Nombre" name="nombre">
+      <input type="email" placeholder="Email" name="correo">
+      <textarea placeholder="Mensaje" name="mensaje"></textarea>
+      <input type="submit" value="ENVIAR">
+    </form>
+  </div>
+  <div class="derecha">
+    <div class="gym-hours">
+      <h3>HORARIOS</h3>
+      <ul>
+        <li>Lunes-Viernes: 7am – 11pm</li>
+        <li>Sábados: 8am – 17pm</li>
+        <li>Domingos: 7am – 11 am</li>
+      </ul>
+    </div>
+    <div class="pass">
+      <h3>3 DÍAS GRATIS</h3>
+      <a href="">UNITE</a>
+    </div>
+  </div>
+</section>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.0.min.js"
+  integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+  crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+
+
+</html>
